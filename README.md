@@ -1,5 +1,5 @@
-# Gym Landing Page
+# Beast Fitness
 
->> I have yet to think of a name for this
+>> Beast, really? lol
 
 by Ruel Misa
