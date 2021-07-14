@@ -62,7 +62,7 @@ section, header {
     align-items: center;
 
     &__logo {
-        font-size: 3.5rem;
+        font-size: clamp(2rem, 4vw, 3.5rem);
         font-weight: 700;
     }
 
@@ -74,7 +74,10 @@ section, header {
     
         &-item {
             padding: 2rem 1.5rem;
-            font-size: 1.4rem;
+            font-size: clamp(1.2rem, 4vw, 1.4rem);
+            display: flex;
+            align-items: center;
+            justify-content: center;
     
             &--primary {
                 cursor: pointer;
@@ -98,6 +101,11 @@ section, header {
     }
 }
 
+.mobile__nav {
+    font-size: 2.5rem;
+    display: none;
+}
+
     
 
 // Hero Section
@@ -109,7 +117,7 @@ section, header {
     height: 80vh;
 
     &__title {
-        font-size: 8rem;
+        font-size: clamp(4rem, 10vw, 8rem);
         width: 40%;
         margin-left: 20rem;
     }
@@ -125,7 +133,7 @@ section, header {
     left: 0;
     width: 100%;
     display: grid;
-    grid-template-columns: 75% auto 8rem;
+    grid-template-columns: 70% auto 8rem;
     opacity: 0;
     transform: translateX(10%) scale(.9);
     pointer-events: none;
@@ -268,4 +276,87 @@ section, header {
 .close-btn {
     color: $white;
     cursor: pointer;
+}
+
+
+@media screen and (max-width: 1200px) {
+    .left {
+
+        &__cards {
+            flex-direction: column;
+        }
+    
+        &__card {
+            width: 100%;
+    
+            &:nth-of-type(1) {
+                margin-right: 0;
+                margin-bottom: 5rem;
+            }
+        }
+    
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .mobile__nav {
+        display: block;
+    }
+
+    .header__nav{
+        
+        &-item {
+            &:not(:last-of-type) {
+                display: none;
+            }
+        }
+    }
+
+    .left {
+        padding-right: 5rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        background-position: center;
+    }
+
+    section, header {
+        width: 100%;
+        padding: 0 2rem;
+    }
+
+    
+
+    .hero {
+
+        align-items: center;
+
+        &__title {
+            margin-left: 0;
+        }
+    }
+}
+
+@media screen and (max-width: 430px) {
+
+    .header {
+
+        &__logo {
+            margin-right: 1.5rem;
+
+        }
+
+        &__nav {
+            &-item--primary {
+                font-size: 1.2rem;
+                text-align: center;
+            }
+    
+            &-link {
+                padding: 0;
+            }
+        }
+    }
 }

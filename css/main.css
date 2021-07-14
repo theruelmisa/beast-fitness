@@ -61,7 +61,7 @@ section, header {
 }
 
 .header__logo {
-  font-size: 3.5rem;
+  font-size: clamp(2rem, 4vw, 3.5rem);
   font-weight: 700;
 }
 
@@ -73,7 +73,16 @@ section, header {
 
 .header__nav-item {
   padding: 2rem 1.5rem;
-  font-size: 1.4rem;
+  font-size: clamp(1.2rem, 4vw, 1.4rem);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .header__nav-item--primary {
@@ -96,6 +105,11 @@ section, header {
   padding: 1.5rem;
 }
 
+.mobile__nav {
+  font-size: 2.5rem;
+  display: none;
+}
+
 .hero {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -111,7 +125,7 @@ section, header {
 }
 
 .hero__title {
-  font-size: 8rem;
+  font-size: clamp(4rem, 10vw, 8rem);
   width: 40%;
   margin-left: 20rem;
 }
@@ -126,8 +140,8 @@ section, header {
   width: 100%;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 75% auto 8rem;
-      grid-template-columns: 75% auto 8rem;
+  -ms-grid-columns: 70% auto 8rem;
+      grid-template-columns: 70% auto 8rem;
   opacity: 0;
   -webkit-transform: translateX(10%) scale(0.9);
           transform: translateX(10%) scale(0.9);
@@ -282,5 +296,64 @@ section, header {
 .close-btn {
   color: #fefdff;
   cursor: pointer;
+}
+
+@media screen and (max-width: 1200px) {
+  .left__cards {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .left__card {
+    width: 100%;
+  }
+  .left__card:nth-of-type(1) {
+    margin-right: 0;
+    margin-bottom: 5rem;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .mobile__nav {
+    display: block;
+  }
+  .header__nav-item:not(:last-of-type) {
+    display: none;
+  }
+  .left {
+    padding-right: 5rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    background-position: center;
+  }
+  section, header {
+    width: 100%;
+    padding: 0 2rem;
+  }
+  .hero {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .hero__title {
+    margin-left: 0;
+  }
+}
+
+@media screen and (max-width: 430px) {
+  .header__logo {
+    margin-right: 1.5rem;
+  }
+  .header__nav-item--primary {
+    font-size: 1.2rem;
+    text-align: center;
+  }
+  .header__nav-link {
+    padding: 0;
+  }
 }
 /*# sourceMappingURL=main.css.map */
