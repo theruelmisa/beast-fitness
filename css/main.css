@@ -77,6 +77,7 @@ section, header {
 }
 
 .header__nav-item--primary {
+  cursor: pointer;
   margin-left: 2.5rem;
   font-weight: 700;
   background: #fefdff;
@@ -127,10 +128,17 @@ section, header {
   display: grid;
   -ms-grid-columns: 75% auto 8rem;
       grid-template-columns: 75% auto 8rem;
+  opacity: 0;
+  -webkit-transform: translateX(10%) scale(0.9);
+          transform: translateX(10%) scale(0.9);
+  pointer-events: none;
 }
 
 .left, .center, .right {
   height: 100vh;
+  -webkit-transform: translateX(15%);
+          transform: translateX(15%);
+  opacity: 0;
 }
 
 .left {
