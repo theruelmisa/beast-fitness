@@ -416,7 +416,7 @@ section, header {
     -webkit-box-pack: end;
         -ms-flex-pack: end;
             justify-content: flex-end;
-    padding-right: 2rem;
+    padding: 2rem;
   }
 }
 
@@ -442,6 +442,9 @@ section, header {
   }
   .center {
     padding: 2rem;
+  }
+  .close-btn {
+    padding: .5rem;
   }
 }
 /*# sourceMappingURL=main.css.map */

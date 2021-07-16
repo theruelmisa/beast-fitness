@@ -380,7 +380,7 @@ section, header {
     .right {
         grid-row: 1 / 2;
         justify-content: flex-end;
-        padding-right: 2rem;
+        padding: 2rem;
     }
 }
 
@@ -416,6 +416,10 @@ section, header {
 
     .center {
         padding: 2rem;
+    }
+
+    .close-btn {
+        padding: .5rem;
     }
 
 }
