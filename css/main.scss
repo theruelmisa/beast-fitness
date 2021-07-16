@@ -63,7 +63,11 @@ section, header {
 
     &__logo {
         font-size: clamp(2rem, 4vw, 3.5rem);
-        font-weight: 700;
+        font-weight: 500;
+
+        &--emphasis {
+            font-weight: 700;
+        }
     }
 
     &__nav {
@@ -120,6 +124,19 @@ section, header {
         font-size: clamp(4rem, 10vw, 8rem);
         width: 40%;
         margin-left: 20rem;
+        animation: fadeInLeft 1s ease-in-out .8s 1 normal forwards;
+    }
+}
+
+@keyframes fadeInLeft {
+    from {
+        transform: translateX(-30rem);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
     }
 }
 
@@ -140,7 +157,6 @@ section, header {
 }
 
 .left, .center, .right {
-    height: 100vh;
     transform: translateX(15%);
     opacity: 0;
 }
@@ -265,10 +281,10 @@ section, header {
 }
 
 .right {
-    display: grid;
-    justify-items: center;
+    display: flex;
+    justify-content: center;
     align-items: start;
-    font-size: 3rem;
+    font-size: 3.5rem;
     padding-top: 2rem;
     background-color: $main-color;
 }
@@ -327,8 +343,6 @@ section, header {
         padding: 0 2rem;
     }
 
-    
-
     .hero {
 
         align-items: center;
@@ -336,6 +350,36 @@ section, header {
         &__title {
             margin-left: 0;
         }
+    }
+
+    .overlay {
+        grid-template-columns: 1fr;
+        grid-template-rows: 8rem 50% auto;
+    }
+
+    .left {
+        padding: 5rem;
+
+    }
+
+    .center {
+        padding: 10rem;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .secondary-nav {
+        display: flex;
+        align-items: center;
+        gap: 3rem;
+    }
+
+    .right {
+        grid-row: 1 / 2;
+        justify-content: flex-end;
+        padding-right: 2rem;
     }
 }
 
