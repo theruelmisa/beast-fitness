@@ -407,7 +407,7 @@ section, header {
 
     .overlay {
         grid-template-columns: 1fr;
-        grid-template-rows: auto;
+        grid-template-rows: auto auto auto;
     }
 
     .left {
@@ -415,7 +415,7 @@ section, header {
     }
 
     .center {
-        padding: 2rem;
+        padding: 2rem 2rem 6rem;
     }
 
     .close-btn {
